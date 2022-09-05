@@ -1,0 +1,32 @@
+﻿CREATE TABLE [dbo].[gyakornoki_program] (
+  [jelentkező_id] [bigint] NOT NULL,
+  [név] [nvarchar](100) NULL,
+  [szül_hely] [nvarchar](100) NULL,
+  [szül_idő] [date] NULL,
+  [állampolgárság] [nvarchar](100) NULL,
+  [lakcím] [nvarchar](500) NULL,
+  [tart_hely] [nvarchar](200) NULL,
+  [pozíció_neve] [nvarchar](100) NULL,
+  [álláshirdetés_szöveg] [nvarchar](2000) NULL,
+  [közzététel_helye] [nvarchar](100) NULL,
+  [közzététel_ideje] [datetime] NULL,
+  [pályázat_érkeztetése] [datetime] NULL,
+  [pályázat_irodai_azonosítója] [nvarchar](100) NOT NULL,
+  [iskolai_végzettség] [nvarchar](700) NULL,
+  [szakmai_tapasztalat] [varchar](700) NULL,
+  [nyelvtudás] [nvarchar](300) NULL,
+  [készségek_képességek] [nvarchar](700) NULL,
+  [önéletrajz_fájlja] [nvarchar](300) NULL,
+  [motivációs_levél_fájlja] [nvarchar](300) NULL,
+  [elbírálás_eredménye] [nvarchar](100) NULL,
+  [elbírálás_napja] [date] NULL,
+  [gy_fogl_kezdete] [date] NULL,
+  [gy_fogl_megszűnése] [date] NULL,
+  [öt_éves_adatkezelés_lejárta] [date] NULL,
+  [gyakorlat_osztályzata] [tinyint] NULL,
+  [gyakorlat_szöveges_értékelése] [varchar](800) NULL,
+  CONSTRAINT [PK__gyakorno__D807692637FB2E66] PRIMARY KEY CLUSTERED ([jelentkező_id]),
+  CONSTRAINT [UQ__gyakorno__28FF8166F27FE486] UNIQUE ([pályázat_irodai_azonosítója])
+)
+ON [PRIMARY]
+GO
